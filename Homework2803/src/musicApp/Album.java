@@ -5,11 +5,11 @@ import java.util.Date;
 
 public class Album {
 	
-	public String albumName;
-	public String artistName;
-	public String releaseDate;
-	public ArrayList<Song> songs;
-	public double albumPrice;
+	private String albumName;
+	private String artistName;
+	private String releaseDate;
+	private ArrayList<Song> songs;
+	private double albumPrice;
 	
 	public Album(String albumName, String artistName, String releaseDate, ArrayList<Song> songs, double albumPrice) {
 		super();
@@ -20,6 +20,37 @@ public class Album {
 		this.albumPrice = albumPrice;
 	}
 	public Album() {}
+	public String getAlbumName() {
+		return albumName;
+	}
+	public void setAlbumName(String albumName) {
+		this.albumName = albumName;
+	}
+	public String getArtistName() {
+		return artistName;
+	}
+	public void setArtistName(String artistName) {
+		this.artistName = artistName;
+	}
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+	public ArrayList<Song> getSongs() {
+		return songs;
+	}
+	public void setSongs(ArrayList<Song> songs) {
+		this.songs = songs;
+	}
+	public double getAlbumPrice() {
+		return albumPrice;
+	}
+	public void setAlbumPrice(double albumPrice) {
+		this.albumPrice = albumPrice;
+	}
+	
 	
 	
 

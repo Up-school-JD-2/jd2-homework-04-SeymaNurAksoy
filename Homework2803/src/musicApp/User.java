@@ -2,8 +2,8 @@ package musicApp;
 
 public class User {
 	
-	public Basket basket;
-	public String userFullName;
+	private Basket basket;
+	private String userFullName;
 	
 	
 	public User(Basket basket, String userFullName) {
@@ -16,5 +16,23 @@ public class User {
 		
 		System.out.println("Kullanıcı Eklendi--> "+ user.userFullName);
 	}
+
+	public Basket getBasket() {
+		return basket;
+	}
+
+	public void setBasket(Basket basket) {
+		this.basket = basket;
+	}
+
+	public String getUserFullName() {
+		return userFullName;
+	}
+
+	public void setUserFullName(String userFullName) {
+		this.userFullName = userFullName;
+	}
+	
+	
 
 }

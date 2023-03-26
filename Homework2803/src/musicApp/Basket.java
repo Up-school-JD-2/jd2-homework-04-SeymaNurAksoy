@@ -9,7 +9,7 @@ public class Basket {
 	
 	public void add(ArrayList<Album> addAlbums,ArrayList<Song> addSongs,User user) {
 		
-		System.out.println("Sepet  ile ilişkilendirilen kullanıcımız:" +user.userFullName );
+		System.out.println("Sepet  ile ilişkilendirilen kullanıcımız:" +user.getUserFullName() );
 		for (Song song : addSongs) {
 			songs.add(song);
 		}
@@ -24,10 +24,10 @@ public class Basket {
 		double totalPriceAlbum=0;
 
 		for (Song song : songs) {
-			totalPriceSong=song.songPrice+totalPriceSong;
+			totalPriceSong=song.getSongPrice()+totalPriceSong;
 		}
 		for (Album album : albums) {
-			totalPriceAlbum=album.albumPrice+totalPriceAlbum;
+			totalPriceAlbum=album.getAlbumPrice()+totalPriceAlbum;
 		}	
 		return totalPriceAlbum+totalPriceSong;
 	}
@@ -37,12 +37,12 @@ public class Basket {
 		System.out.println("🎵 Satın Alınan Şarkılar");
 		
 		for (Song song : songs) {
-			System.out.println("Şarkı ismi:" + song.songName + " Şarkının Bulunduğu Albüm: "+song.albumName +
-					"Şarkının uzunluğu: "+ song.length+" dk "+ "Ücreti: "+song.songPrice );
+			System.out.println("Şarkı ismi:" + song.getSongName() + " Şarkının Bulunduğu Albüm: "+song.getAlbumName() +
+					"Şarkının uzunluğu: "+ song.getLength()+" dk "+ "Ücreti: "+song.getSongPrice());
 		}
 		System.out.println("🎵 Satın Alınan Albümler");
 		for (Album album : albums) {
-			System.out.println("Albüm ismi: "+album.albumName+ " Albüm ücreti: "+album.albumPrice);
+			System.out.println("Albüm ismi: "+album.getAlbumName()+ " Albüm ücreti: "+album.getAlbumPrice());
 		}
 	}
 	

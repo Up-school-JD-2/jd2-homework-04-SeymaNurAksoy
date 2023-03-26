@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Song extends Album {
 	
-	public String songName;
-	public double length;
-	public double songPrice;
+	private String songName;
+	private double length;
+	private double songPrice;
 
 	
 	public Song(String albumName, String artistName, String releaseDate, ArrayList<Song> songs, double albumPrice,
@@ -41,6 +41,36 @@ public class Song extends Album {
 			System.out.println("Aradığınız şarkı yoktur.");
 		}
 		
+	}
+
+
+	public String getSongName() {
+		return songName;
+	}
+
+
+	public void setSongName(String songName) {
+		this.songName = songName;
+	}
+
+
+	public double getLength() {
+		return length;
+	}
+
+
+	public void setLength(double length) {
+		this.length = length;
+	}
+
+
+	public double getSongPrice() {
+		return songPrice;
+	}
+
+
+	public void setSongPrice(double songPrice) {
+		this.songPrice = songPrice;
 	}
 	
 
